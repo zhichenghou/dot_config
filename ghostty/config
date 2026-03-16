@@ -1,0 +1,101 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/bytedance/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+# ========== 字体设置 ==========
+# 主字体：Maple Mono NF CN
+font-family = Maple Mono NF CN
+font-size = 14
+# 行高设置（Maple Font 官方推荐 1.8 行高，实测最佳值为 30%）
+adjust-cell-height = 10%
+# 启用 Maple Mono 连字和字体特性（官方推荐配置）
+# calt: 基本连字 | zero: 带点的零 | cv01: 去除间隙
+# ss01: 分离等号 | ss02: 分离比较符 | ss07: 强制 >> 连字 | ss08: 双箭头
+font-feature = calt, cv01, cv03, ss01, ss02, ss03
+# 字体粗细（让字体更粗，类似 Tabby 600/700 配置）
+# font-thicken = true
+
+# ========== 主题设置 ==========
+theme = Material Design Colors
+
+# ========== 窗口尺寸 ==========
+# 设置窗口初始大小（以字符为单位）
+window-width = 175
+window-height = 45
+# 记住窗口位置和大小
+window-save-state = always
+
+# ========== 光标设置 ==========
+# 光标样式：block（粗方块光标，类似 Tabby）
+cursor-style = block
+# 光标闪烁
+cursor-style-blink = true
+# 光标颜色（使用明亮的橙色，更醒目）
+cursor-color = #ff9e64
+# 光标下的文本颜色
+cursor-text = #1a1b26
+
+# ========== 窗口外观 ==========
+# 窗口内边距
+window-padding-x = 8
+window-padding-y = 8
+# 窗口装饰样式（macOS）- tabs 样式支持标签栏
+macos-titlebar-style = tabs
+# 保持窗口阴影
+macos-window-shadow = true
+
+# ========== 其他优化 ==========
+# 背景略微透明（可选，1.0 为完全不透明）
+background-opacity = 0.97
+# 滚动缓冲区大小（单位：字节）
+# 适合 Claude Code 等长对话应用
+scrollback-limit = 200000000
+# 在输入时隐藏鼠标
+mouse-hide-while-typing = true
+
+# ========== Shell Integration ==========
+# 启用 shell 集成，但明确禁用 cursor 特性（避免覆盖我们的光标设置）
+shell-integration = zsh
+shell-integration-features = no-cursor,title
+keybind = shift+enter=text:\x1b\r
+keybind = ctrl+enter=text:\\\r
