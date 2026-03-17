@@ -66,9 +66,12 @@ nvm() {
   lazy_load_nvm
   nvm $@
 }
-
 # mysql
 export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 
 # Added by coco installer
 export PATH="/Users/bytedance/.local/bin:$PATH"
+
+
+# 8. alias
+alias ll='ls -alFG'
