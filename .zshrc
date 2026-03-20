@@ -6,7 +6,7 @@ ZSH_THEME="robbyrussell"
 
 # plugin gonfig
 # ══════════════════════════════════════════════════════════════════════
-# 2. 命令补全
+#  命令补全
 # ══════════════════════════════════════════════════════════════════════
 # Zsh 补全系统增强
 if type brew &>/dev/null; then
@@ -24,7 +24,7 @@ else
 fi
 
 # ══════════════════════════════════════════════════════════════════════
-# 5. Zsh 插件
+#  Zsh 插件
 # ══════════════════════════════════════════════════════════════════════
 # zsh-autosuggestions - 根据历史命令自动补全建议（灰色提示）
 if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
@@ -39,13 +39,13 @@ fi
 # bindkey '^I' forward-word
 
 # ══════════════════════════════════════════════════════════════════════
-# 6. 提示符主题 (Starship)
+#  提示符主题 (Starship)
 # ══════════════════════════════════════════════════════════════════════
 if command -v starship &>/dev/null; then
     eval "$(starship init zsh)"
 fi
 
-# 7. PATH
+#  PATH
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
 export PATH="/opt/homebrew/bin:$PATH"
@@ -73,5 +73,5 @@ export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 export PATH="/Users/bytedance/.local/bin:$PATH"
 
 
-# 8. alias
+# alias
 alias ll='ls -alFG'
