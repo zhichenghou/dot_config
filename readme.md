@@ -319,14 +319,12 @@ brew install yazi
 - `~/.config/yazi/yazi.toml`
 - `~/.config/yazi/init.lua`
 - `~/.config/yazi/package.toml`
-- `~/.config/yazi/theme.toml`
 
 ### 当前配置特点
 
 - 文件列表布局比例已调整
 - 默认显示隐藏文件
 - 启用了 `git.yazi` 插件初始化配置
-- 使用 `gruvbox-dark` flavor，让 Yazi 的整体观感更接近 Vim 的 `retrobox` 风格
 
 ### 插件说明
 
@@ -335,27 +333,6 @@ brew install yazi
 ```bash
 ya pkg add yazi-rs/plugins:git
 ```
-
-### 主题 / Flavor 说明
-
-当前 Yazi 使用的是 `gruvbox-dark` flavor。
-
-如果在新机器上没有自动同步该 flavor，可以手动执行：
-
-```bash
-ya pkg add bennyyip/gruvbox-dark
-```
-
-对应配置如下：
-
-`theme.toml`
-
-```toml
-[flavor]
-dark = "gruvbox-dark"
-```
-
-这个 flavor 会让 Yazi 的整体 UI 和代码预览更接近当前 Vim 的深色复古风格，方便在“浏览文件”和“编辑文件”之间保持更一致的视觉体验。
 
 ### 启动方式
 
