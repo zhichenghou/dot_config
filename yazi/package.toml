@@ -3,5 +3,7 @@ use = "yazi-rs/plugins:git"
 rev = "1962818"
 hash = "26db011a778f261d730d4f5f8bf24b3f"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"
