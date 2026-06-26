@@ -59,3 +59,7 @@ export PATH="/Users/bytedance/.local/bin:$PATH"
 
 # alias
 alias ll='ls -alFG'
+
+
+# edgar tool
+export EDGAR_IDENTITY="zhichenghou@gmail.com"

@@ -1,0 +1,6 @@
+{
+  "theme": "builtin://terminal",
+  "file_browser": {
+    "show_hidden": true
+  }
+}

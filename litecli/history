@@ -1,0 +1,100 @@
+
+# 2026-06-18 11:35:09.132956
++.tab
+
+# 2026-06-18 11:35:11.317450
++.tables
+
+# 2026-06-18 11:35:15.396928
++.schema
+
+# 2026-06-18 11:35:39.818440
++.databases
+
+# 2026-06-18 11:36:16.180145
++CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER);
+
+# 2026-06-18 11:36:20.378738
++INSERT INTO users (name, age) VALUES ('Tom', 20);
+
+# 2026-06-18 11:36:24.173322
++SELECT * FROM users WHERE age > 18 LIMIT 10;
+
+# 2026-06-18 11:36:27.911087
++.tables
+
+# 2026-06-18 11:36:32.668444
++.schema users
+
+# 2026-06-18 11:36:39.854078
++UPDATE users SET age = 21 WHERE id = 1;
+
+# 2026-06-18 11:36:45.523752
++INSERT INTO users (id, name) VALUES (1, 'Tom')
++      ON CONFLICT(id) DO UPDATE SET name = excluded.name;
+
+# 2026-06-18 11:38:02.641335
++.mode markdown
+
+# 2026-06-18 11:38:47.214362
++.output users.csv
+
+# 2026-06-18 11:39:08.854139
++select * from users;
+
+# 2026-06-18 11:39:14.505849
++.output users.csv
+
+# 2026-06-18 11:39:43.727918
++.mode csv
+
+# 2026-06-18 11:39:45.468070
++.output users.csv
+
+# 2026-06-18 11:40:29.663074
++select * from users;
+
+# 2026-06-18 11:40:45.723877
++.output stdout
+
+# 2026-06-18 11:40:47.344488
++select * from users;
+
+# 2026-06-18 11:40:58.448186
++.output user.csv
+
+# 2026-06-18 11:41:00.174273
++select * from users;
+
+# 2026-06-18 11:42:16.458006
++.mode column
+
+# 2026-06-18 11:42:57.784525
++.output
+
+# 2026-06-18 11:43:07.827030
++.echo off
+
+# 2026-06-18 11:43:15.090754
++.output user.csv
+
+# 2026-06-18 11:43:19.178026
++select * from users;
+
+# 2026-06-18 11:43:30.739017
++.output 
+
+# 2026-06-18 11:44:01.395717
++.mode column
+
+# 2026-06-18 11:44:50.418010
++.mode simple
+
+# 2026-06-18 11:44:53.253024
++select * from users;
+
+# 2026-06-18 11:46:25.954973
++notee
+
+# 2026-06-18 11:46:28.261743
++select * from users;
